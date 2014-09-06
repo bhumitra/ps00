@@ -1,0 +1,21 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname |Ex 10|) (read-case-sensitive #t) (teachpacks ((lib "image.rkt" "teachpack" "2htdp") (lib "universe.rkt" "teachpack" "2htdp"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "image.rkt" "teachpack" "2htdp") (lib "universe.rkt" "teachpack" "2htdp")))))
+Ex 10: Define a function that takes three numbers as arguments and returns the sum of the two larger numbers. As always, write down contract, purpose statement, and examples.
+
+; sum-two-larger : Number Number Number -> Number
+; GIVEN: Three numbers are passed as arguments.
+; RETURNS: The sum of two larger number
+; Examples:
+; (sum-two-larger 15 10 5) => 25
+; (sum-two-larger 11 11 2) => 22
+; (sum-two-larger -4 2 4) => 6
+
+(define (sum-two-larger x y z)
+    (cond
+      [(>(+ x y) (+ y z) and >(+ x y) (+ x z)) (+ x y)]
+      ))
+
+(sq 5)
+(sq 11)
+(sq -4)
