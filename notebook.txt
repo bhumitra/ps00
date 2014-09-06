@@ -8,3 +8,4 @@ Date	Who	Start	Stop	Interruptions	Question	TimeOnTask (min)	Comments
 4-Sep	BN	21:05	22:30	15		70	Read Prologue from textbook
 5-Sep	BN	14:30	15:44	0		74	Gone through lessons 0.1,0.2,0.3,0.4 (not yet started the exercises)
 6-Sep	BN	0:25	1:00	0		35	Completed exercises 1,2 and 3 
+6-Sep	BN	2:25	2:32	0		7	Completed Ex. 4
