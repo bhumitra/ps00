@@ -5,9 +5,18 @@ Date	Who	Start	Stop	Interruptions	Question	TimeOnTask (min)	Comments
 2-Sep	BN	15:41	15:46	0					5	create gravatar account and upload picture
 2-Sep	BN	15:47	15:48	0					1	upload pic at github
 2-Sep	BN	15:50	15:52	0					2	download & install github windows client
-4-Sep	BN	21:05	22:30	15					70	Read Prologue from textbook
+4-Sep	BN	21:05	22:30	15					70	Read Prologue from textbook and learnt to use github
 5-Sep	BN	14:30	15:44	0					74	Gone through lessons 0.1,0.2,0.3,0.4 (not yet started the exercises)
 6-Sep	BN	0:25	1:00	0					35	Completed exercises 1,2 and 3 
 6-Sep	BN	2:25	2:32	0					7	Completed Ex. 4
-6-Sep	BN	13:30	2:40	15					55	Completed Ex.5,6,7,8 and Referred to piazza for Ex.7 and read part 1 from textbook. 
-6-Sep	BN	3:00	4:10	20					50	Completed Ex 9,10 -- spent time in understanding differene in remainder and modulo
+6-Sep	BN	13:30	14:40	15					55	Completed Ex.5,6,7,8 and Referred to piazza for Ex.7 and read part 1 from textbook. 
+6-Sep	BN	15:00	16:10	20					50	Completed Ex 9,10 -- spent time in understanding differene in remainder and modulo
+6-Sep	BN	5:00	5:25	0					25	Added funcion tests - referred to piazza for ex 9. 
+
+
+
+Total Time on notebook setup (min) -- 41 
+Total Time on Ex 1 to 10 (min) ------ 172
+
+Total Time on notebook setup (Hours) -- 0.7
+Total Time on Ex 1 to 10 (Hours) ------ 2.87
