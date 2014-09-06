@@ -1,4 +1,4 @@
-module00
+ps00
 ========
 
 solution to module00
