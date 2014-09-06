@@ -13,5 +13,12 @@
 ; (area-circle 5)  =>  #i78.53981633974483
 ; (area-circle 7)  =>  #i153.93804002589985
 
+(define (area-circle radius)
+  (* pi (expt radius 2)))
+
+
+(area-circle 1)  
+(area-circle 5) 
+(area-circle 7)
 
 
