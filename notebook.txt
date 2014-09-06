@@ -1,11 +1,12 @@
 Date	Who	Start	Stop	Interruptions	Question	TimeOnTask (min)	Comments
-30-Aug	BN	17:45	18:01	1		15	set up ccis account
-30-Aug	BN	18:11	18:20	0		9	install racket
-2-Sep	BN	15:31	15:40	0		9	signup github
-2-Sep	BN	15:41	15:46	0		5	create gravatar account and upload picture
-2-Sep	BN	15:47	15:48	0		1	upload pic at github
-2-Sep	BN	15:50	15:52	0		2	download & install github windows client
-4-Sep	BN	21:05	22:30	15		70	Read Prologue from textbook
-5-Sep	BN	14:30	15:44	0		74	Gone through lessons 0.1,0.2,0.3,0.4 (not yet started the exercises)
-6-Sep	BN	0:25	1:00	0		35	Completed exercises 1,2 and 3 
-6-Sep	BN	2:25	2:32	0		7	Completed Ex. 4
+30-Aug	BN	17:45	18:01	1					15	set up ccis account
+30-Aug	BN	18:11	18:20	0					9	install racket
+2-Sep	BN	15:31	15:40	0					9	signup github
+2-Sep	BN	15:41	15:46	0					5	create gravatar account and upload picture
+2-Sep	BN	15:47	15:48	0					1	upload pic at github
+2-Sep	BN	15:50	15:52	0					2	download & install github windows client
+4-Sep	BN	21:05	22:30	15					70	Read Prologue from textbook
+5-Sep	BN	14:30	15:44	0					74	Gone through lessons 0.1,0.2,0.3,0.4 (not yet started the exercises)
+6-Sep	BN	0:25	1:00	0					35	Completed exercises 1,2 and 3 
+6-Sep	BN	2:25	2:32	0					7	Completed Ex. 4
+6-Sep	BN	13:30	2:40	15					55	Completed Ex.5,6,7,8 and Referred to piazza for Ex.7 and read part 1 from textbook. 
