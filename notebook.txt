@@ -10,3 +10,4 @@ Date	Who	Start	Stop	Interruptions	Question	TimeOnTask (min)	Comments
 6-Sep	BN	0:25	1:00	0					35	Completed exercises 1,2 and 3 
 6-Sep	BN	2:25	2:32	0					7	Completed Ex. 4
 6-Sep	BN	13:30	2:40	15					55	Completed Ex.5,6,7,8 and Referred to piazza for Ex.7 and read part 1 from textbook. 
+6-Sep	BN	3:00	4:10	20					50	Completed Ex 9,10 -- spent time in understanding differene in remainder and modulo
