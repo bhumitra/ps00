@@ -11,12 +11,12 @@ Date	Who	Start	Stop	Interruptions	Question	TimeOnTask (min)	Comments
 6-Sep	BN	2:25	2:32	0					7	Completed Ex. 4
 6-Sep	BN	13:30	14:40	15					55	Completed Ex.5,6,7,8 and Referred to piazza for Ex.7 and read part 1 from textbook. 
 6-Sep	BN	15:00	16:10	20					50	Completed Ex 9,10 -- spent time in understanding differene in remainder and modulo
-6-Sep	BN	5:00	5:25	0					25	Added funcion tests - referred to piazza for ex 9. 
-
+6-Sep	BN	17:00	17:25	0					25	Added funcion tests - referred to piazza for ex 9 
+7-Sep	BN	18:30	18:35	0					 5	moved all .rkt to set00 as told in piazza 
 
 
 Total Time on notebook setup (min) -- 41 
-Total Time on Ex 1 to 10 (min) ------ 172
+Total Time on Ex 1 to 10 (min) ------ 177
 
 Total Time on notebook setup (Hours) -- 0.7
-Total Time on Ex 1 to 10 (Hours) ------ 2.87
+Total Time on Ex 1 to 10 (Hours) ------ 2.95
