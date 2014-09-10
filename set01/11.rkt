@@ -9,8 +9,8 @@
 ; that argument is of the type point
 
 ; point-x : Point -> Number
-; takes argument of type Point and returns x component of it
+; takes argument of type Point and returns x component (second argument) of it
 
 ; point-y : Point -> Number
-; takes argument of type Point and returns y component of it
+; takes argument of type Point and returns y component (second argument) of it
 
