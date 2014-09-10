@@ -1,0 +1,31 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname |19|) (read-case-sensitive #t) (teachpacks ((lib "image.rkt" "teachpack" "2htdp") (lib "universe.rkt" "teachpack" "2htdp"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "image.rkt" "teachpack" "2htdp") (lib "universe.rkt" "teachpack" "2htdp")))))
+; rel-rec-sequence : Number Number -> Rectangle
+; Takes two numbers and returns a solid blue rectangle
+; GIVEN: Takes two numbers which are width of the rectangle and proportion of
+;        width and height such that height = width * proportion
+; RETURNS: Solid blue rectangle given width and proportion
+; Examples:
+; (rel-rec-sequence 3 4) => a solid blue rectangle with width 3 and height 12 
+; (rel-rec-sequence 4 5) => a solid blue rectangle with width 4 and height 20
+; (rel-rec-sequence 1 3) => a solid blue rectangle with width 1 and height 3
+; (rel-rec-sequence 0 7) => no rectangle should be drawn
+
+
+
+(define (rel-rec-sequence width proportion)
+  (rectangle width 
+             (* width proportion)
+             "solid"
+             "blue"))
+
+(rel-rec-sequence 3 4)
+(rel-rec-sequence 4 5)
+(rel-rec-sequence 1 3)
+(rel-rec-sequence 0 7)
+
+(check-expect (rel-rec-sequence 3 4) (rectangle 3 12 "solid" "blue"))
+(check-expect (rel-rec-sequence 4 5) (rectangle 4 20 "solid" "blue"))
+(check-expect (rel-rec-sequence 1 3) (rectangle 1 3 "solid" "blue"))
+(check-expect (rel-rec-sequence 0 7) (rectangle 0 0 "solid" "blue"))

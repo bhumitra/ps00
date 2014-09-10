@@ -2,3 +2,5 @@ Date	Who	Start	Stop	Interruptions	Question TimeOnTask (min)	Comments
 10-Sep	BN	16:30	16:45	0		Ex11		15		referred to slides to understand whats asked
 10-Sep	BN	16:50	17:30	10		Ex 12-15	30		Ex 11-15 complete.
 =============committing to git: 9/10 17:45 ====================================
+10-Sep	BN	17:40	19:00	5		Ex 16-20	75		Ex 16-20 complete.
+=============committing to git: 9/10 19:00 ====================================

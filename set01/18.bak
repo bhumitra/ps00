@@ -1,0 +1,7 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname |18|) (read-case-sensitive #t) (teachpacks ((lib "image.rkt" "teachpack" "2htdp") (lib "universe.rkt" "teachpack" "2htdp"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "image.rkt" "teachpack" "2htdp") (lib "universe.rkt" "teachpack" "2htdp")))))
+; rec-sequence : Number -> Rectangle
+; takes an argument to return the nth element in this sequence
+; GIVEN: it takes an argument n, where n is a number that tells the function to return the nth element in this sequence
+; RETURN: a Rectangle which whose dimensions are defined by the 2^n x 2^(n+1)
