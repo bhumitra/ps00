@@ -1,0 +1,36 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname |21|) (read-case-sensitive #t) (teachpacks ((lib "image.rkt" "teachpack" "2htdp") (lib "universe.rkt" "teachpack" "2htdp"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "image.rkt" "teachpack" "2htdp") (lib "universe.rkt" "teachpack" "2htdp")))))
+(define-struct person (first-name last-name age height weight))
+; A Person is a
+; (make-person String String NonNegInt PosReal PosReal)
+; Interpretation:
+;  first-name is the first name of a person
+;  last-name is the last name of a person
+;  age is the age of a person
+;  height is the height of a person in centimeters
+;  weight is the weight of a person in kg
+
+;person-image : Person -> Image
+; GIVEN: takes an instance of person
+; RETURNS: returns an image of a person proportionate to the 
+;          height of the person. i.e. if one person is twice the size of
+;          another person, the image for the first person should be twice as
+;          high and wide as the image of the second person.
+; Examples:
+
+(define person-image (make-person "jack" "johnson" 22 180 80))
+  (above (underlay/xy
+        (underlay/xy (ellipse 40 40 "solid" "brown")
+                     5
+                     15
+                     (ellipse 10 10 "solid" "black"))
+        25
+        15
+        (ellipse 10 10 "solid" "black"))
+       (beside(rectangle 10 80 "solid" "brown") 
+              (ellipse 70 100 "solid" "red") 
+              (rectangle 10 80 "solid" "brown"))
+       (beside (rectangle 20 80 "solid" "blue")
+               (line 5 0 "white")
+               (rectangle 20 80 "solid" "blue")))
