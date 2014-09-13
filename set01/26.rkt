@@ -1,0 +1,55 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname |26|) (read-case-sensitive #t) (teachpacks ((lib "image.rkt" "teachpack" "2htdp") (lib "universe.rkt" "teachpack" "2htdp"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "image.rkt" "teachpack" "2htdp") (lib "universe.rkt" "teachpack" "2htdp")))))
+(require 2htdp/image)
+
+(define-struct point (x y)) 
+
+(define list-of-points1 (list (make-point 50 50) 
+                              (make-point 150 150) 
+                              (make-point 200 200)))
+
+(define list-of-points2 (list (make-point 50 50) 
+                              (make-point 150 150)))
+
+; circle-draw : ListOfPoints -> Image
+; GIVEN: function that takes a list of Points as argument
+; RETURNS: a solid blue circle with radius 10 at every Point in that list
+;          into a 300x300 scene.
+; Example:
+;  (circle-draw empty) -> (empty-scene 300 300)
+;  (circle-draw list-of-points1))
+;      => 
+;(place-image
+; (circle 10 "solid" "blue")
+; 50 50
+; (place-image
+;  (circle 10 "solid" "blue")
+;  150 150
+;  (place-image
+;   (circle 10 "solid" "blue")
+;   200 200 (empty-scene 300 300))))
+
+
+(define (circle-draw lp)
+  (cond
+    [(empty? lp) (empty-scene 300 300)]
+    [else (place-image (circle 10 "solid" "blue")
+                       (point-x (first lp))
+                       (point-y (first lp))
+                       (circle-draw (rest lp)))]))
+
+(circle-draw list-of-points1)
+
+(check-expect (circle-draw empty) (empty-scene 300 300))
+
+(check-expect (circle-draw list-of-points1)
+              (place-image
+               (circle 10 "solid" "blue")
+               50 50
+               (place-image
+                (circle 10 "solid" "blue")
+                150 150
+                (place-image
+                 (circle 10 "solid" "blue")
+                 200 200 (empty-scene 300 300)))))

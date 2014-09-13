@@ -1,6 +1,6 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-beginner-reader.ss" "lang")((modname |21|) (read-case-sensitive #t) (teachpacks ((lib "image.rkt" "teachpack" "2htdp") (lib "universe.rkt" "teachpack" "2htdp"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "image.rkt" "teachpack" "2htdp") (lib "universe.rkt" "teachpack" "2htdp")))))
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname |29|) (read-case-sensitive #t) (teachpacks ((lib "image.rkt" "teachpack" "2htdp") (lib "universe.rkt" "teachpack" "2htdp"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "image.rkt" "teachpack" "2htdp") (lib "universe.rkt" "teachpack" "2htdp")))))
 (define-struct person (first-name last-name age height weight))
 ; A Person is a
 ; (make-person String String NonNegInt PosReal PosReal)
@@ -53,14 +53,49 @@
                 (beside leg
                         separator
                         leg))))
-         
-         
-         
-(person-image (make-person "jack" "johnson" 22 90 80))
-(person-image (make-person "jack" "johnson" 22 180 80))
-(person-image (make-person "jack" "johnson" 22 270 80))
-         
-         
-         
-         
-         
+
+
+
+
+
+
+;
+;
+;(list(person-image (make-person "jack" "johnson" 22 90 80))
+;     (person-image (make-person "jack" "johnson" 22 180 80))
+;     (person-image (make-person "jack" "johnson" 22 270 80)))
+
+
+; group-photo : ListOfPersons -> Image
+; GIVEN: takes a list of people as argument 
+; RETURNS: An image of these people, placing them beside each other
+; Examples: 
+;
+;=> (beside/align "bottom" 
+;                 (person-image (make-person "jack" "johnson" 22 180 80))
+;                 (person-image (make-person "jack" "johnson" 22 90 80))
+;                 (person-image (make-person "jack" "johnson" 22 150 80)))
+
+
+(define (group-photo lop)
+  (cond 
+    [(empty? lop) (empty-scene 0 0)]
+    [(empty? (rest lop)) (person-image(first lop))]
+    [else (beside/align "bottom" 
+                        (person-image(first lop)) 
+                        (group-photo (rest lop)))]))
+
+;tests
+(check-expect(group-photo (list (make-person "jack" "johnson" 22 180 80)
+                                (make-person "jack" "johnson" 22 90 80)
+                                (make-person "jack" "johnson" 22 150 80)))
+             (beside/align "bottom" 
+                           (person-image 
+                            (make-person "jack" "johnson" 22 180 80))
+                           (person-image 
+                            (make-person "jack" "johnson" 22 90 80))
+                           (person-image 
+                            (make-person "jack" "johnson" 22 150 80))))
+
+(check-expect(group-photo empty) (empty-scene 0 0))
+             

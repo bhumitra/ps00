@@ -1,0 +1,65 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname |28|) (read-case-sensitive #t) (teachpacks ((lib "image.rkt" "teachpack" "2htdp") (lib "universe.rkt" "teachpack" "2htdp"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "image.rkt" "teachpack" "2htdp") (lib "universe.rkt" "teachpack" "2htdp")))))
+(require 2htdp/image)
+
+; list-to-string : ListOfSting -> String
+; GIVEN: A list containing strings is passed as argument
+; RETURNS: A single string with words separated by space.
+; Examples:
+; (list-to-string empty " ") => ""
+; (list-to-string "hi!" "how" "are" "you?") => "hi! how are you?"
+
+(define (list-to-string los)
+  (cond [(empty? los) ""]
+        [(empty? (rest los)) (first los)]
+        [else (string-append (first los) " " (list-to-string (rest los)))]))
+
+;(list-to-string (list "hi!" "how" "are" "you?"))
+
+; wordlist-to-image : ListOfString -> image
+; GIVEN: A list of strings is given as argumnt to function
+; RETURNS: an image of the combined text of given list, separated by spaces 
+; Examples:
+; (wordlist-to-image empty) => (text "" 14 "red")
+; (wordlist-to-image (list "hi!" "how" "are" "you?")) 
+;  => (text "hi! how are you?" 14 "red")
+
+(define (wordlist-to-image los)
+  (text (list-to-string los) 14 "red"))
+
+
+
+; list-of-lists-to-image :  ListOfListOfString -> Image
+; GIVEN: Takes a list of list of strings as argument    
+; RETURNS: produces an image where each list of strings is on a separate line
+; Example:
+; (list-of-lists-to-image empty) -> (text "" 14 "red")
+; (list-of-lists-to-image (list (list "Hi!" "bhumitra") 
+;                               (list "how" "are" "you")))
+;  => (above (text "Hi! bhumitra" 14 "red") (text "how are you" 14 "red"))
+
+(define (list-of-lists-to-image llos)
+  (cond [(empty? llos) (text "" 14 "red")]
+        [(empty? (rest llos)) (wordlist-to-image(first llos))]
+        [else (above (wordlist-to-image(first llos)) 
+                     (list-of-lists-to-image (rest llos)))]))
+
+(list-of-lists-to-image (list (list "Hi!" "bhumitra") 
+                              (list "how" "are" "you")))
+
+
+;tests
+(check-expect (list-of-lists-to-image (list (list "Hi!" "bhumitra") 
+                                            (list "how" "are" "you")))
+              (above (text "Hi! bhumitra" 14 "red")
+                     (text "how are you" 14 "red")))
+
+
+(check-expect (list-of-lists-to-image (list (list "Hi!" "bhumitra") 
+                                            (list "")))
+              (above (text "Hi! bhumitra" 14 "red")
+                     (text "" 14 "red")))
+
+(check-expect (list-of-lists-to-image empty) 
+              (text "" 14 "red"))
